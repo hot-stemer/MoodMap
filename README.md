@@ -15,12 +15,9 @@ MoodMap is a web applcation that helps user journal their emotions and visualize
 
 ## Features
 
-- Select emotions from multiple mood options
-- Interactive SVG body map
-- Color body parts based on selected emotion
-- Mood intensity slider
-- Personal notes for each entry
-- Save entries using Local Storage
-- View past emotional records
-- Responsive design for different screen sizes
+- selecting emotion
+- adding personal notes for each entry 
+- selecting emotion intensity
+- inveractive svg body map
+- viewing past entries and records 
   
