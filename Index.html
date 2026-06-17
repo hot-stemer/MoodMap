@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="healthy.png">
+<title>moodmap</title>
+    </head>
+    <body>
+<header>Track your emotions and notice the patterns.</header>
+<div class="maincontinar">
+<div class="continar">
+    <h1> How are you feeling today</h1>
+    <p>Select the emotion that best matches your mood!</p>
+<div class="emotions">
+<button class="box a2" id="Happy" onclick="happybtn()"><span class="emoji">😊</span><span>Happy</span></button>
+<button class="box a3" id="Calm" onclick="calmbtn()"><span class="emoji">😌</span><span>Calm</span></button>
+<button class="box a4" id="Anxious" onclick="anxiousbtn()"><span class="emoji">😰</span><span>Anxious</span></button>
+<button class="box a5" id="Angry" onclick="angrybtn()"><span class="emoji">😡</span><span>Angry</span></button>
+<button class="box a6" id="Sad" onclick="sadbtn()"><span class="emoji">😢</span><span>Sad</span></button>
+<button class="box a7" id="Excited" onclick="excitedbtn()"><span class="emoji">🤩</span><span>Excited</span></button>
+</div>
+<label class="moodrangelabel" for="moodrange">Mood intensity</label>
+<input type="range" id="moodrange" min="1" max="10" value="5">
+<output>5</output>
+</div>
+
+  <div class="continar bodymood">
+   <h1>where do you feel it in your body ?</h1>
+   <p>tap to mark areas</p>
+<svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg"
+   width="400 "class="svgContinar">
+  <rect id="neck" class="svgPart" x="88" y="62" width="24" height="18" rx="6"/>
+
+  <ellipse id="head" class="svgPart"
+    cx="100" cy="36" rx="32" ry="36" onclick="selectedPart('head')"/>
+
+  <ellipse id="left-shoulder" class="svgPart"
+    cx="46" cy="90" rx="18" ry="17" onclick="selectedPart('left-shoulder')"/>
+
+  <ellipse id="right-shoulder" class="svgPart"
+    cx="154" cy="90" rx="18" ry="17" onclick="selectedPart('right-shoulder')"/>
+
+  <rect id="chest" class="svgPart"
+    x="54" y="80" width="92" height="62" rx="12" onclick="selectedPart('chest')"/>
+
+  <rect id="belly" class="svgPart"
+    x="56" y="143" width="88" height="52" rx="10" onclick="selectedPart('belly')"/>
+
+  <rect id="left-arm" class="svgPart"
+    x="18" y="104" width="30" height="72" rx="12" onclick="selectedPart('left-arm')"/>
+
+  <rect id="right-arm" class="svgPart"
+    x="152" y="104" width="30" height="72" rx="12" onclick="selectedPart('right-arm')"/>
+
+  <ellipse id="left-hand" class="svgPart"
+    cx="33" cy="190" rx="16" ry="12" onclick="selectedPart('left-hand')"/>
+
+  <ellipse id="right-hand" class="svgPart"
+    cx="167" cy="190" rx="16" ry="12" onclick="selectedPart('right-hand')"/>
+
+  <rect id="hips" class="svgPart"
+    x="52" y="194" width="96" height="32" rx="10" onclick="selectedPart('hips')"/>
+
+  <rect id="left-leg" class="svgPart"
+    x="54" y="224" width="36" height="82" rx="14" onclick="selectedPart('left-leg')"/>
+
+  <rect id="right-leg" class="svgPart"
+    x="110" y="224" width="36" height="82" rx="14" onclick="selectedPart('right-leg')"/>
+
+  <ellipse id="left-foot" class="svgPart"
+    cx="72" cy="312" rx="22" ry="11" onclick="selectedPart('left-foot')"/>
+
+  <ellipse id="right-foot" class="svgPart"
+    cx="128" cy="312" rx="22" ry="11" onclick="selectedPart('right-foot')"/>
+
+</svg></div></div>
+
+
+<div class="continar">
+<h1>add a note for your entry</h1>
+  <textarea id="notes" placeholder="your thoughts go here..."></textarea>
+</div>
+<button id="savebtn" class="savebtn" onclick="savebtn()">save entry</button>
+<button class="savebtn linkbtn" onclick="linkbtn('pastEntries.html')">your past entries</button>
+<footer></footer>
+<script src="index.js" defer></script>
+    </body>
+</html>
